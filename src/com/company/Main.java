@@ -11,5 +11,6 @@ public class Main {
 	// write your code here
         studentList st=new studentList();
         st.addStudent();
+        st.dislay();
     }
 }
