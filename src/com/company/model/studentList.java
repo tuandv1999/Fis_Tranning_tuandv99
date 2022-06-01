@@ -3,9 +3,7 @@ package com.company.model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class studentList  {
     public final int MAX=100;
@@ -17,8 +15,8 @@ public class studentList  {
     static List<student> list = new ArrayList<>();
 
     public studentList() {
-        this.count=0;
-        this.student=new student[MAX];
+        this.count = 0;
+        this.student = new student[MAX];
     }
 
     public void addStudent() throws ParseException {
@@ -48,6 +46,15 @@ public class studentList  {
     }
     public void dislay(){
         System.out.println("vua nhap xong:"+st.toString());
+    }
+    public void sort(){
+        for(int i=0;i<list.size();i++){
+            System.out.println("sau khi sap xep");
+        }
+        Collections.sort(list,this::compare);
+    }
+    public int compare(student o1, student o2) {
+        return o1.getCode() - o2.getCode();
     }
 
 }

@@ -6,6 +6,8 @@ public class student {
     private int code;
     private String name;
     private Date birthDate;
+    public void compareTo(student st){
+    }
 
     public student() {
     }
