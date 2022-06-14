@@ -1,0 +1,1 @@
+2022-06-10 10:50:30 ERROR java.sql.SQLSyntaxErrorException: Table 'evidence_db.criminal_case' doesn't exist
