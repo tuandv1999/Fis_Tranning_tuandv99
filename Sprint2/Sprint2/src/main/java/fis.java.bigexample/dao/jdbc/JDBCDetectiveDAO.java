@@ -44,6 +44,15 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
 
     @Override
     public void update(Detective detective) {
+        List<Detective> detectives = new ArrayList<>();
+        try(
+        Connection con = DatabaseUtility.getConnection();
+        PreparedStatement stmt = con.prepareStatement("UPDATE * SET detective");
+        ResultSet rs = stmt.executeQuery ()){
+
+        }catch (Exception e){
+
+        }
 
     }
 
