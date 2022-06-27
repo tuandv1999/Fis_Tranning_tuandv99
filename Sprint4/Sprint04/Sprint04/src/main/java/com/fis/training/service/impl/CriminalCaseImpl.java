@@ -1,6 +1,7 @@
 package com.fis.training.service.impl;
 
 import com.fis.training.model.CriminalCase;
+import com.fis.training.model.Detective;
 import com.fis.training.model.core.Rank;
 import com.fis.training.repository.CriminalCaseRepository;
 import com.fis.training.repository.EvidenceRepository;
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CriminalCaseImpl implements CriminalCaseService {
@@ -45,10 +45,4 @@ public class CriminalCaseImpl implements CriminalCaseService {
         return criminalCaseRepository.findAll();
     }
 
-    @Override
-    public List<CriminalCase> findByRank(CriminalCase criminalCase, Rank rank) {
-        return criminalCaseRepository.findAll()
-                .stream()
-                .filter(t->t.getId().equals(criminalCase.getLeadInvestigator().getRank().equals("CHIEF_INSPECTOR"))).collect(Collectors.toList());
-    }
 }

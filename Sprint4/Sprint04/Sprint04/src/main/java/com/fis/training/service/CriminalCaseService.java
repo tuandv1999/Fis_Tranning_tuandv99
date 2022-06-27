@@ -11,5 +11,4 @@ public interface CriminalCaseService {
     CriminalCase updateCriminalCase(CriminalCase criminalCase);
     void deleteCriminalCaseById(Long criminalCaseId);
     List<CriminalCase> findAll();
-    List<CriminalCase>findByRank(CriminalCase criminalCase, Rank rank);
 }

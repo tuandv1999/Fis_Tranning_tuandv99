@@ -41,9 +41,6 @@ public class CriminalRestController {
     public CriminalCase getById(@PathVariable Long id){
         return  this.criminalCaseService.findById(id);
     }
-    @GetMapping("/findbyrank")
-    public List<CriminalCase>listRankCriminal(CriminalCase criminalCase,Rank rank){
-        return criminalCaseService.findByRank(criminalCase,rank);
-    }
+
 
 }
