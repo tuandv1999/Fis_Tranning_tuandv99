@@ -42,7 +42,7 @@ public class OrderController {
         return orderService.findById(orderId);
     }
     @PutMapping("/create")
-    public Order Create(Order order){
+    public Order Create(@RequestBody Order order){
         return orderService.createOrder(order);
     }
     @PostMapping("/delete/{orderId}")

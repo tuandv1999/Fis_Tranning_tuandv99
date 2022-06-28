@@ -39,7 +39,7 @@ public class CustomerController {
         return customerService.findById(customerId);
     }
     @PutMapping("/create")
-    public Customer Create(Customer customer){
+    public Customer Create(@RequestBody Customer customer){
         return customerService.createCustomer(customer);
     }
     @PostMapping("/update/{customerId}")
